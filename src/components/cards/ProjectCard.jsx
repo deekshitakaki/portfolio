@@ -131,7 +131,7 @@ export default function ProjectCard({ project: p }) {
           ))}
         </p>
 
-        <button onClick={() => setOpen(!open)} className="mt-2 w-fit text-sm text-fog transition-colors hover:text-paper">
+        <button onClick={() => setOpen(!open)} className="-my-1 mt-1 w-fit py-2 pr-4 text-sm text-fog transition-colors hover:text-paper">
           {open ? 'show less' : '… more'}
         </button>
 

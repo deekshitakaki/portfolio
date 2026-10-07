@@ -29,7 +29,7 @@ export default function Section({
           className="mb-10 md:mb-14"
         >
           <div className="mb-4 flex items-center justify-between gap-4">
-            <p className="flex min-w-0 items-center gap-3 font-mono text-[11px] uppercase tracking-[0.18em] text-fog">
+            <p className="flex min-w-0 items-center gap-3 font-mono text-[11px] uppercase tracking-[0.12em] text-fog sm:tracking-[0.18em]">
               <span className="text-(--accent)">{sectionNumber(id)}</span>
               <span className="h-px w-6 shrink-0 bg-line sm:w-10" />
               <span className="truncate">{kicker}</span>

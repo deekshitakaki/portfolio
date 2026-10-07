@@ -5,7 +5,7 @@ import { profile, socials } from '../../data/profile'
 import Avatar from '../ui/Avatar'
 import SocialIcon from '../ui/SocialIcon'
 import Burst from '../ui/Burst'
-import { ease } from '../../lib/utils'
+import { ease, withFlags } from '../../lib/utils'
 import { isVisible } from '../../lib/sections'
 
 const container = { hidden: {}, show: { transition: { staggerChildren: 0.09, delayChildren: 0.1 } } }
@@ -71,7 +71,7 @@ function ProfileHeader({ onOpenStory }) {
         <span className="absolute left-[62%] top-4 animate-float text-2xl [animation-delay:-3s]">💿</span>
         <span className="absolute bottom-3 left-[80%] animate-float text-xl [animation-delay:-2s]">🌱</span>
         <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-ink/70 px-2.5 py-1 font-mono text-[11px] text-paper backdrop-blur">
-          <MapPin size={12} /> {profile.location}
+          <MapPin size={12} /> {withFlags(profile.location)}
         </span>
       </div>
 

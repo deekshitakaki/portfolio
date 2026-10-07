@@ -66,7 +66,7 @@ export default function TimelineCard({ item, index, onOpen }) {
             </p>
             <button
               onClick={onOpen}
-              className="inline-flex items-center gap-1.5 rounded-full bg-white/5 px-3 py-1.5 text-xs font-medium transition-colors hover:bg-(--c) hover:text-ink"
+              className="inline-flex items-center gap-1.5 rounded-full bg-white/5 px-3.5 py-2 text-xs font-medium transition-colors hover:bg-(--c) hover:text-ink"
             >
               <Play size={12} fill="currentColor" /> watch story
             </button>

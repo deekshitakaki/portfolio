@@ -44,6 +44,21 @@ export function shortAgo(date) {
 /** 1247 → '1,247' */
 export const formatNumber = (n) => Math.round(n).toLocaleString('en-US')
 
+// flag emoji → image, so flags look right everywhere (windows can't draw flag emoji)
+const flags = { '🇮🇳': '/flags/in.svg' }
+const flagPattern = new RegExp(`(${Object.keys(flags).join('|')})`)
+
+/** 'India 🇮🇳' → ['India ', <img flag>] */
+export function withFlags(text) {
+  return text.split(flagPattern).map((part, i) =>
+    flags[part] ? (
+      <img key={i} src={flags[part]} alt={part} className="inline-block h-[0.85em] w-auto rounded-[2px] align-[-0.05em]" />
+    ) : (
+      part
+    ),
+  )
+}
+
 /** turns 'build **cool** stuff' into ['build ', <mark>cool</mark>, ' stuff'] */
 export function withMarker(text) {
   return text.split('**').map((part, i) =>

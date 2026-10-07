@@ -4,7 +4,7 @@ import { Play } from 'lucide-react'
 import { about } from '../../data/about'
 import Section from '../ui/Section'
 import ProfileCard from '../cards/ProfileCard'
-import { accents, ease, withMarker } from '../../lib/utils'
+import { accents, ease, withFlags, withMarker } from '../../lib/utils'
 
 const hasFlags = about.greenFlags.length > 0 || about.redFlags.length > 0
 const hasTakes = about.hotTakes.length > 0
@@ -40,7 +40,7 @@ export default function About() {
               <li key={f.label} className="flex items-start gap-3 text-sm">
                 <span className="w-5 text-center text-base leading-5">{f.emoji}</span>
                 <span className="w-24 shrink-0 leading-5 text-fog">{f.label}</span>
-                <span className="leading-5">{f.value}</span>
+                <span className="leading-5">{withFlags(f.value)}</span>
               </li>
             ))}
           </ul>
